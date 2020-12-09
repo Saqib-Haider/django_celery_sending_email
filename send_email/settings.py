@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'celeryemail',
     'django_celery_beat',
+    'import_export',
 ]
 
 MIDDLEWARE = [

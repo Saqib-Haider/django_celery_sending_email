@@ -1,0 +1,13 @@
+{% if messages %}
+{% for message in messages%}
+<div class="alert alert-{{ messages.tags }}" role="alert">
+    <p{%if message.tags %} class=""{% endif %}> {{ message }}</p>
+</div>
+{% endfor %}
+{% endif %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile" style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+    <button type="submit" style="border: 1px solid black; padding: 5px;">Upload</button>
+    <h3>Upload Excel file into database</h3>
+</form>
